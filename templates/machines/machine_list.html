@@ -1,36 +1,56 @@
 {% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h2 style="color: var(--primary); margin-bottom: 20px;">Машины</h2>
+<h2 style="color: var(--primary); margin-bottom: 20px;">{{ title }}</h2>
 
-<form id="filter-form"
-      hx-get="."
-      hx-target="#machine-table"
-      hx-trigger="change, keyup delay:500ms from:input, submit"
-      hx-push-url="true">
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
-        {{ filter.form.as_p }}
+{% if user.is_authenticated %}
+    <!-- ФИЛЬТРЫ ДЛЯ АВТОРИЗОВАННЫХ -->
+    <form id="filter-form"
+          hx-get="."
+          hx-target="#machine-table"
+          hx-trigger="change, keyup delay:500ms from:input, submit"
+          hx-push-url="true">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+            {{ filter.form.as_p }}
+        </div>
+        <button type="submit" class="btn" style="background: var(--primary);">Применить фильтры</button>
+    </form>
+
+    <div id="machine-table">
+        {% include "machines/partials/_table.html" %}
     </div>
-    <button type="submit" class="btn" style="background: var(--primary);">Применить фильтры</button>
-</form>
 
-<div id="machine-table">
-    {% include "machines/partials/_table.html" %}
-</div>
+    {% if is_paginated %}
+    <div style="margin: 20px 0; text-align: center;">
+        {% for num in paginator.page_range %}
+            <a href="?page={{ num }}"
+               hx-get="?page={{ num }}"
+               hx-target="#machine-table"
+               hx-push-url="true"
+               class="btn {% if num == page_obj.number %}active{% endif %}"
+               style="margin: 0 5px; background: {% if num == page_obj.number %}var(--accent){% else %}#ccc{% endif %}; color: white;">
+                {{ num }}
+            </a>
+        {% endfor %}
+    </div>
+    {% endif %}
 
-<!-- Пагинация -->
-{% if is_paginated %}
-<div style="margin: 20px 0; text-align: center;">
-    {% for num in paginator.page_range %}
-        <a href="?page={{ num }}"
-           hx-get="?page={{ num }}"
-           hx-target="#machine-table"
-           hx-push-url="true"
-           class="btn {% if num == page_obj.number %}active{% endif %}"
-           style="margin: 0 5px; background: {% if num == page_obj.number %}var(--accent){% else %}#ccc{% endif %}; color: white;">
-            {{ num }}
-        </a>
-    {% endfor %}
-</div>
+{% else %}
+    <!-- ПОИСК ДЛЯ ГОСТЕЙ -->
+    <div style="max-width: 600px; margin: 0 auto;">
+        <form hx-get="{% url 'machines:guest_search' %}"
+              hx-target="#guest-results"
+              hx-trigger="submit"
+              style="display: flex; gap: 10px;">
+            <input type="text"
+                   name="serial_number"
+                   placeholder="Введите заводской номер машины"
+                   style="flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 4px;"
+                   required>
+            <button type="submit" class="btn">Найти</button>
+        </form>
+        <div id="guest-results" style="margin-top: 20px;"></div>
+    </div>
 {% endif %}
-{% endblock %}/html>
+{% endblock %}

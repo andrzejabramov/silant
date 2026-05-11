@@ -1,0 +1,38 @@
+{% if error %}
+    <div style="color: var(--accent); margin-top: 15px; padding: 10px; background: #fff; border-radius: 6px; border-left: 4px solid var(--accent);">
+        {{ error }}
+    </div>
+{% elif machine %}
+    <div class="table-wrapper" style="margin-top: 20px;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Зав. №</th>
+                    <th>Модель техники</th>
+                    <th>Модель двигателя</th>
+                    <th>Зав. № двигателя</th>
+                    <th>Модель трансмиссии</th>
+                    <th>Зав. № трансмиссии</th>
+                    <th>Модель вед. моста</th>
+                    <th>Зав. № вед. моста</th>
+                    <th>Модель упр. моста</th>
+                    <th>Зав. № упр. моста</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ machine.serial_number }}</td>
+                    <td>{{ machine.technique_model.name }}</td>
+                    <td>{{ machine.engine_model.name }}</td>
+                    <td>{{ machine.engine_serial|default:"—" }}</td>
+                    <td>{{ machine.transmission_model.name }}</td>
+                    <td>{{ machine.transmission_serial|default:"—" }}</td>
+                    <td>{{ machine.driving_axle_model.name }}</td>
+                    <td>{{ machine.driving_axle_serial|default:"—" }}</td>
+                    <td>{{ machine.steerable_axle_model.name }}</td>
+                    <td>{{ machine.steerable_axle_serial|default:"—" }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endif %}
