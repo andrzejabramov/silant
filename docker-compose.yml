@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: silant_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5437:5432"  # 5433 на хосте → 5432 в контейнере (чтобы не конфликтовать с другими)
+    volumes:
+      - silant_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Опционально: удобный веб-интерфейс для БД (удалить, если не нужен)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: silant_pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@silant.local
+      PGADMIN_DEFAULT_PASSWORD: admin_pass
+    ports:
+      - "5050:80"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  silant_pg_data:
+    driver: local

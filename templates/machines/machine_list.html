@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="color: var(--primary); margin-bottom: 20px;">Машины</h2>
+
+<form id="filter-form"
+      hx-get="."
+      hx-target="#machine-table"
+      hx-trigger="change, keyup delay:500ms from:input, submit"
+      hx-push-url="true">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+        {{ filter.form.as_p }}
+    </div>
+    <button type="submit" class="btn" style="background: var(--primary);">Применить фильтры</button>
+</form>
+
+<div id="machine-table">
+    {% include "machines/partials/_table.html" %}
+</div>
+
+<!-- Пагинация -->
+{% if is_paginated %}
+<div style="margin: 20px 0; text-align: center;">
+    {% for num in paginator.page_range %}
+        <a href="?page={{ num }}"
+           hx-get="?page={{ num }}"
+           hx-target="#machine-table"
+           hx-push-url="true"
+           class="btn {% if num == page_obj.number %}active{% endif %}"
+           style="margin: 0 5px; background: {% if num == page_obj.number %}var(--accent){% else %}#ccc{% endif %}; color: white;">
+            {{ num }}
+        </a>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}/html>

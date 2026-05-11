@@ -1,0 +1,26 @@
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Зав. №</th>
+                <th>Модель техники</th>
+                <th>Клиент</th>
+                <th>Дата отгрузки</th>
+                <th>Сервисная компания</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for machine in machines %}
+            <tr hx-get="TODO_DETAIL_URL/{{ machine.id }}" hx-target="body" hx-push-url="true">
+                <td>{{ machine.serial_number }}</td>
+                <td>{{ machine.technique_model.name }}</td>
+                <td>{{ machine.client.name|default:"—" }}</td>
+                <td>{{ machine.shipment_date|date:"d.m.Y" }}</td>
+                <td>{{ machine.service_company.name|default:"—" }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="5" style="text-align:center;">Машин не найдено</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
