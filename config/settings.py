@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_filters',
     'rest_framework',
+    'drf_spectacular',
     'allauth',
     'allauth.account',
     'claims',
@@ -166,3 +167,22 @@ LANGUAGE_CODE = 'ru-RU'
 TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 USE_TZ = True
+
+# Django REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# drf-spectacular (Swagger)
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Силант API',
+    'DESCRIPTION': 'API для сервиса отслеживания состояния техники ЧЗСА',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}

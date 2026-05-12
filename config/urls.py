@@ -16,9 +16,29 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponseRedirect
+from rest_framework.routers import DefaultRouter
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+from machines.viewsets import MachineViewSet
+
+
+# Router для API
+router = DefaultRouter()
+router.register(r'machines', MachineViewSet, basename='machine')
+
+def redirect_to_machines(request):
+    return HttpResponseRedirect('/machines/')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('machines/', include('machines.urls')),
+
+    # API + Swagger
+    path('api/', include(router.urls)),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+
+    path('', redirect_to_machines),
 ]

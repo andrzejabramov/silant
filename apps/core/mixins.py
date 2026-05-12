@@ -1,29 +1,19 @@
 class MachineAccessMixin:
-    """
-    Ограничивает queryset машин по роли пользователя.
-    Должен идти ПЕРЕД FilterView в наследовании.
-    """
-
     def get_queryset(self):
         qs = super().get_queryset()
         user = self.request.user
 
-        # Гости видят только через отдельный поиск (реализуем на след. шаге)
-        if not user.is_authenticated:
-            return qs.none()
-
-        profile = getattr(user, 'profile', None)
-        if not profile:
-            return qs.none()
-
-        role = profile.role
-        org = profile.organization
-
-        if role == 'manager':
+        # 1. Менеджер / Суперпользователь → видит всё
+        if user.is_superuser or (hasattr(user, 'profile') and user.profile.role == 'manager'):
             return qs.filter(is_deleted=False)
-        elif role == 'client' and org:
-            return qs.filter(client=org, is_deleted=False)
-        elif role == 'service' and org:
-            return qs.filter(service_company=org, is_deleted=False)
 
-        return qs.none()
+        # 2. Авторизованный клиент / сервис → только свои машины
+        if user.is_authenticated and hasattr(user, 'profile'):
+            profile = user.profile
+            if profile.role == 'client' and profile.organization:
+                return qs.filter(client=profile.organization, is_deleted=False)
+            if profile.role == 'service' and profile.organization:
+                return qs.filter(service_company=profile.organization, is_deleted=False)
+
+        # 3. Гость → только непроданные машины (каталог)
+        return qs.filter(client__isnull=True, is_deleted=False)

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+    <a href="{% url 'machines:machine_list' %}" class="btn" style="background: #888;">← Назад к списку</a>
+    <h1 style="color: var(--primary); margin: 0;">{{ machine.serial_number }} | {{ machine.technique_model.name }}</h1>
+</div>
+
+<style>
+    .tab-nav { display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 2px solid #ccc; flex-wrap: wrap; }
+    .tab-btn { padding: 10px 20px; background: none; border: none; cursor: pointer; font-size: 1rem; font-weight: 500; color: #666; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+</style>
+
+<div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('tech')">Технические данные</button>
+    {% if user.is_authenticated %}
+        <button class="tab-btn" onclick="switchTab('to')">ТО</button>
+        <button class="tab-btn" onclick="switchTab('claims')">Рекламации</button>
+    {% endif %}
+</div>
+
+<!-- Вкладка 1: Тех. данные (видна всем) -->
+<div id="tech" class="tab-content active">
+    <div class="table-wrapper">
+        <table>
+            <tr><th style="width:40%">Параметр</th><th>Значение</th></tr>
+            <tr><td>Модель двигателя</td><td>{{ machine.engine_model.name }}</td></tr>
+            <tr><td>Зав. № двигателя</td><td>{{ machine.engine_serial|default:"—" }}</td></tr>
+            <tr><td>Модель трансмиссии</td><td>{{ machine.transmission_model.name }}</td></tr>
+            <tr><td>Зав. № трансмиссии</td><td>{{ machine.transmission_serial|default:"—" }}</td></tr>
+            <tr><td>Модель ведущего моста</td><td>{{ machine.driving_axle_model.name }}</td></tr>
+            <tr><td>Зав. № ведущего моста</td><td>{{ machine.driving_axle_serial|default:"—" }}</td></tr>
+            <tr><td>Модель управляемого моста</td><td>{{ machine.steerable_axle_model.name }}</td></tr>
+            <tr><td>Зав. № управляемого моста</td><td>{{ machine.steerable_axle_serial|default:"—" }}</td></tr>
+            <tr><td>Договор поставки</td><td>{{ machine.supply_contract_number }} от {{ machine.supply_contract_date|date:"d.m.Y"|default:"—" }}</td></tr>
+            <tr><td>Дата отгрузки</td><td>{{ machine.shipment_date|date:"d.m.Y" }}</td></tr>
+            <tr><td>Грузополучатель</td><td>{{ machine.recipient|default:"—" }}</td></tr>
+            <tr><td>Адрес эксплуатации</td><td>{{ machine.operation_address|default:"—" }}</td></tr>
+            <tr><td>Комплектация</td><td>{{ machine.equipment_options|default:"—" }}</td></tr>
+            <tr><td>Клиент</td><td>{{ machine.client.name|default:"—" }}</td></tr>
+            <tr><td>Сервисная компания</td><td>{{ machine.service_company.name|default:"—" }}</td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- Вкладка 2: ТО (только для авторизованных) -->
+{% if user.is_authenticated %}
+<div id="to" class="tab-content">
+    <!-- Кнопка добавления ТО -->
+    <div style="margin-bottom: 15px; display: flex; justify-content: flex-end;">
+        <a href="{% url 'machines:add_maintenance' machine.pk %}" class="btn" style="background: var(--primary);">+ Добавить ТО</a>
+    </div>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr><th>Вид ТО</th><th>Дата</th><th>Наработка, м/ч</th><th>Заказ-наряд</th><th>Сервисная компания</th></tr>
+            </thead>
+            <tbody>
+                {% for record in maintenance_list %}
+                <tr>
+                    <td>{{ record.maintenance_type.name }}</td>
+                    <td>{{ record.maintenance_date|date:"d.m.Y" }}</td>
+                    <td>{{ record.operating_hours }}</td>
+                    <td>{{ record.work_order_number|default:"—" }}</td>
+                    <td>{{ record.service_company.name }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5">Нет записей о ТО</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Вкладка 3: Рекламации (только для авторизованных) -->
+<div id="claims" class="tab-content">
+    <!-- Кнопка добавления рекламации -->
+    <div style="margin-bottom: 15px; display: flex; justify-content: flex-end;">
+        <a href="{% url 'machines:add_claim' machine.pk %}" class="btn" style="background: var(--accent);">+ Создать рекламацию</a>
+    </div>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr><th>Узел отказа</th><th>Дата отказа</th><th>Наработка, м/ч</th><th>Статус</th><th>Время простоя</th><th>Сервисная компания</th></tr>
+            </thead>
+            <tbody>
+                {% for claim in claims_list %}
+                <tr>
+                    <td>{{ claim.failure_node.name }}</td>
+                    <td>{{ claim.failure_date|date:"d.m.Y" }}</td>
+                    <td>{{ claim.operating_hours }}</td>
+                    <td>{{ claim.get_status_display }}</td>
+                    <td>{{ claim.downtime_days|default:"—" }} дн.</td>
+                    <td>{{ claim.service_company.name }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="6">Рекламаций нет</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+<script>
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+</script>
+{% endblock %}
