@@ -24,7 +24,7 @@ class AllObjectsManager(models.Manager.from_queryset(SoftDeleteQuerySet)):
 
 
 class BaseModel(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name="ID")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Создано")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Обновлено")
     is_deleted = models.BooleanField(default=False, verbose_name="Удалено (мягкое)")
