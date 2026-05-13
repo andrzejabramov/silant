@@ -1,0 +1,68 @@
+/* =========================================
+   MAIN
+   ========================================= */
+main {
+  flex: 1;
+  padding-top: calc(var(--header-height, 140px) + 24px);
+  padding-bottom: 40px;
+}
+
+/* Убираем возможные конфликты margin у первых элементов внутри main */
+main > *:first-child {
+  margin-top: 0;
+}
+
+/* Таблицы (базовые) */
+.table-wrapper {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+th {
+  background: var(--primary);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  font-weight: 500;
+}
+
+tr:hover {
+  background-color: #f8f8f8;
+}
+
+/* Адаптивное скрытие второстепенных колонок */
+.col-secondary {
+  display: table-cell;
+}
+.col-mobile-hide {
+  display: table-cell;
+}
+@media (max-width: 1024px) {
+  .col-secondary {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .col-mobile-hide {
+    display: none;
+  }
+}

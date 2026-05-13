@@ -1,0 +1,174 @@
+<!-- templates/machines/partials/machine_modal.html -->
+<div class="tab-nav" role="tablist">
+  <button
+    class="tab-btn active"
+    data-tab="tech"
+    role="tab"
+    aria-selected="true"
+  >
+    Технические данные
+  </button>
+  {% if user.is_authenticated %}
+  <button class="tab-btn" data-tab="to" role="tab" aria-selected="false">
+    ТО
+  </button>
+  <button class="tab-btn" data-tab="claims" role="tab" aria-selected="false">
+    Рекламации
+  </button>
+  {% endif %}
+</div>
+
+<!-- Вкладка 1: Тех. данные -->
+<div id="tech" class="tab-content active" role="tabpanel">
+  <table class="machine-table">
+    <tr>
+      <th>Модель двигателя</th>
+      <td>{{ machine.engine_model.name }}</td>
+    </tr>
+    <tr>
+      <th>Зав. № двигателя</th>
+      <td>{{ machine.engine_serial|default:"—" }}</td>
+    </tr>
+    <tr>
+      <th>Модель трансмиссии</th>
+      <td>{{ machine.transmission_model.name }}</td>
+    </tr>
+    <tr>
+      <th>Зав. № трансмиссии</th>
+      <td>{{ machine.transmission_serial|default:"—" }}</td>
+    </tr>
+    <tr>
+      <th>Модель ведущего моста</th>
+      <td>{{ machine.driving_axle_model.name }}</td>
+    </tr>
+    <tr>
+      <th>Зав. № ведущего моста</th>
+      <td>{{ machine.driving_axle_serial|default:"—" }}</td>
+    </tr>
+    <tr>
+      <th>Модель управляемого моста</th>
+      <td>{{ machine.steerable_axle_model.name }}</td>
+    </tr>
+    <tr>
+      <th>Зав. № управляемого моста</th>
+      <td>{{ machine.steerable_axle_serial|default:"—" }}</td>
+    </tr>
+    <tr>
+      <th>Договор поставки</th>
+      <td>
+        {{ machine.supply_contract_number }} от {{
+        machine.supply_contract_date|date:"d.m.Y"|default:"—" }}
+      </td>
+    </tr>
+    <tr>
+      <th>Дата отгрузки</th>
+      <td>{{ machine.shipment_date|date:"d.m.Y" }}</td>
+    </tr>
+    <tr>
+      <th>Грузополучатель</th>
+      <td>{{ machine.recipient|default:"—" }}</td>
+    </tr>
+    <tr>
+      <th>Адрес эксплуатации</th>
+      <td>{{ machine.operation_address|default:"—" }}</td>
+    </tr>
+    {% if machine.equipment_options %}
+    <tr>
+      <th>Комплектация</th>
+      <td style="white-space: pre-line">{{ machine.equipment_options }}</td>
+    </tr>
+    {% endif %}
+    <tr>
+      <th>Клиент</th>
+      <td>{{ machine.client.name|default:"—" }}</td>
+    </tr>
+    <tr>
+      <th>Сервисная компания</th>
+      <td>{{ machine.service_company.name|default:"—" }}</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Вкладка 2: ТО -->
+{% if user.is_authenticated %}
+<div id="to" class="tab-content" role="tabpanel">
+  <div style="margin-bottom: 15px; display: flex; justify-content: flex-end">
+    <a
+      href="{% url 'machines:add_maintenance' machine.pk %}"
+      class="btn"
+      style="background: var(--primary)"
+      >+ Добавить ТО</a
+    >
+  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Вид ТО</th>
+          <th>Дата</th>
+          <th>Наработка, м/ч</th>
+          <th>Заказ-наряд</th>
+          <th>Сервисная компания</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in maintenance_list %}
+        <tr>
+          <td>{{ record.maintenance_type.name }}</td>
+          <td>{{ record.maintenance_date|date:"d.m.Y" }}</td>
+          <td>{{ record.operating_hours }}</td>
+          <td>{{ record.work_order_number|default:"—" }}</td>
+          <td>{{ record.service_company.name }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5">Нет записей о ТО</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Вкладка 3: Рекламации -->
+<div id="claims" class="tab-content" role="tabpanel">
+  <div style="margin-bottom: 15px; display: flex; justify-content: flex-end">
+    <a
+      href="{% url 'machines:add_claim' machine.pk %}"
+      class="btn"
+      style="background: var(--accent)"
+      >+ Создать рекламацию</a
+    >
+  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Узел отказа</th>
+          <th>Дата отказа</th>
+          <th>Наработка, м/ч</th>
+          <th>Статус</th>
+          <th>Время простоя</th>
+          <th>Сервисная компания</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for claim in claims_list %}
+        <tr>
+          <td>{{ claim.failure_node.name }}</td>
+          <td>{{ claim.failure_date|date:"d.m.Y" }}</td>
+          <td>{{ claim.operating_hours }}</td>
+          <td>{{ claim.get_status_display }}</td>
+          <td>{{ claim.downtime_days|default:"—" }} дн.</td>
+          <td>{{ claim.service_company.name }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="6">Рекламаций нет</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
