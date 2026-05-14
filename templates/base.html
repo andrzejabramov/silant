@@ -14,25 +14,135 @@
     {% block extra_css %}{% endblock %}
   </head>
   <body>
-    <header>
-      <div class="header__inner">
-        <!-- 🔹 Здесь будет логотип, навигация, контакты, авторизация -->
-        {% block header %}{% endblock %}
+    <header id="site-header">
+      <div class="header__container">
+        <!-- Верхняя строка: Лого | Контакты | Кнопка -->
+        <div class="header__top">
+          <div class="header__logo">
+            <!-- Герб/эмблема -->
+            <img
+              src="{% static 'img/chzsa_badge.svg' %}"
+              alt="Герб ЧЗСА"
+              class="logo__badge"
+            />
+          </div>
+
+          <div class="header__contacts">
+            <a href="tel:88007005265">📞 8 (800) 700-52-65</a>
+            <a href="https://t.me/silant_service" target="_blank"
+              >✈️ @telegram</a
+            >
+          </div>
+
+          <div class="header__auth">
+            {% if user.is_authenticated %}
+            <!-- Авторизован: имя + кнопка выхода -->
+            <span class="user-greeting">👤 {{ user.username }}</span>
+            <form
+              action="{% url 'account_logout' %}"
+              method="post"
+              style="display: inline; margin-left: 8px"
+            >
+              {% csrf_token %}
+              <button
+                type="submit"
+                class="btn btn-auth"
+                style="padding: 4px 12px; font-size: 0.85rem"
+              >
+                Выйти
+              </button>
+            </form>
+            {% else %}
+            <!-- Не авторизован: кнопка входа (открывает модалку) -->
+            <button
+              type="button"
+              class="btn btn-auth"
+              data-modal-open="auth-modal"
+            >
+              Войти
+            </button>
+            {% endif %}
+          </div>
+
+          <!-- Бургер / Крестик (скрыт на десктопе) -->
+          <button
+            class="header__burger"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <!-- Выпадающий мобильный контейнер (в потоке, сдвигает main вниз) -->
+        <div class="header__mobile-menu" id="mobile-menu">
+          <a href="tel:88007005265" class="mobile-link">📞 8 (800) 700-52-65</a>
+          <a
+            href="https://t.me/silant_service"
+            target="_blank"
+            class="mobile-link"
+            >✈️ @telegram</a
+          >
+          {% if not user.is_authenticated %}
+          <button
+            type="button"
+            class="btn btn-auth"
+            data-modal-open="auth-modal"
+          >
+            Войти
+          </button>
+          {% endif %}
+        </div>
+
+        <!-- Нижняя строка: Заголовок -->
+        <div class="header__bottom">
+          <h1 class="header__title">
+            <span>Электронная</span>
+            <span>сервисная</span>
+            <span>книжка</span>
+            <span>«Мой Силант»</span>
+          </h1>
+        </div>
       </div>
     </header>
 
-    <main class="container">
-      {% if messages %}
-      <div class="messages">
-        {% for message in messages %}
-        <div class="message {{ message.tags }}">{{ message }}</div>
-        {% endfor %}
+    <main class="main-bg">
+      <div class="container">
+        {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+          <div class="message {{ message.tags }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+        {% endif %} {% block content %}{% endblock %}
       </div>
-      {% endif %} {% block content %}{% endblock %}
     </main>
 
     <footer>
-      <div class="container">{% block footer %}{% endblock %}</div>
+      <div class="footer__container">
+        <!-- Левый блок: Лого + Реквизиты -->
+        <div class="footer__left">
+          <img
+            src="{% static 'img/logo-footer.svg' %}"
+            alt="Логотип ЧЗСА"
+            class="footer__logo"
+          />
+          <div class="footer__requisites">
+            <p>ООО «ЧЗСА»</p>
+            <p>ИНН 2127318285 КПП 213001001</p>
+            <p>ОГРН 1022100967404 от 9 августа 2002 г.</p>
+          </div>
+        </div>
+
+        <!-- Правый блок: Контакты -->
+        <div class="footer__right">
+          <div class="footer__contacts">
+            <p>8 (800) 700-52-65</p>
+            <p><a href="mailto:mail@chzsa.ru">mail@chzsa.ru</a></p>
+            <p>г. Чебоксары,<br />пр-т Тракторостроителей, д. 109</p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <div id="reference-modal" class="modal" role="dialog" aria-modal="true">
@@ -46,6 +156,78 @@
           &times;
         </button>
         <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Модалка авторизации -->
+    <div
+      id="auth-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="auth-title"
+    >
+      <div class="modal-content modal-content--auth">
+        <button type="button" class="modal-close" aria-label="Закрыть">
+          &times;
+        </button>
+        <h2 id="auth-title" class="modal-title">Вход в систему</h2>
+
+        <form
+          method="POST"
+          action="{% url 'account_login' %}"
+          class="auth-form"
+        >
+          {% csrf_token %}
+          <!-- Сохраняем редирект на страницу, с которой пользователь пришёл -->
+          <input
+            type="hidden"
+            name="next"
+            value="{{ request.GET.next|default:'/' }}"
+          />
+
+          <div class="form-group">
+            <label for="id_login">Логин или Email</label>
+            <input
+              type="text"
+              name="login"
+              id="id_login"
+              placeholder="Введите логин"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="id_password">Пароль</label>
+            <input
+              type="password"
+              name="password"
+              id="id_password"
+              placeholder="Введите пароль"
+              required
+            />
+          </div>
+
+          {% if form.non_field_errors %}
+          <div class="form-error">{{ form.non_field_errors }}</div>
+          {% endif %}
+
+          <div class="form-group form-group--checkbox">
+            <input type="checkbox" name="remember" id="id_remember" />
+            <label for="id_remember">Запомнить меня</label>
+          </div>
+
+          <button type="submit" class="btn btn--full btn--red">Войти</button>
+        </form>
+
+        <div class="auth-links">
+          <a href="{% url 'account_reset_password' %}">Забыли пароль?</a>
+          {% if ACCOUNT_ALLOW_SIGNUPS %}
+          <span>|</span>
+          <a href="{% url 'account_signup' %}">Регистрация</a>
+          {% endif %}
+        </div>
       </div>
     </div>
 

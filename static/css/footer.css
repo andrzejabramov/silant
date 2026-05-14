@@ -1,12 +1,98 @@
 /* =========================================
-   FOOTER
+   FOOTER: ДВА БЛОКА ПО КРАЯМ (ЧЗСА)
    ========================================= */
 footer {
   background-color: #163e6c;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  text-align: center;
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
   width: 100%;
-  margin-top: auto; /* Прижимает к низу при малом контенте */
+  margin-top: auto;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px clamp(16px, 3vw, 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(20px, 4vw, 80px);
+}
+
+.footer__left,
+.footer__right {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+/* === Левый блок === */
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.footer__requisites p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.3px;
+}
+
+/* === Правый блок === */
+.footer__right {
+  text-align: right;
+}
+.footer__contacts p {
+  margin: 0 0 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+.footer__contacts a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer__contacts a:hover {
+  color: #fff;
+}
+
+/* === АДАПТИВ: 600px → столбец по центру === */
+@media (max-width: 600px) {
+  footer {
+    min-height: auto;
+  }
+  .footer__container {
+    flex-direction: column;
+    align-items: center; /* 👈 Центрируем оба блока по горизонтали */
+    gap: 24px;
+    padding: 24px 20px;
+  }
+  .footer__left,
+  .footer__right {
+    width: 100%;
+    text-align: center; /* 👈 Центрируем текст внутри */
+  }
+  .footer__logo {
+    margin: 0 auto 8px; /* 👈 Центрируем логотип */
+  }
+  .footer__right {
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .footer__requisites p,
+  .footer__contacts p {
+    font-size: 0.82rem;
+  }
 }

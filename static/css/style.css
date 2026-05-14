@@ -111,3 +111,121 @@ body {
   cursor: pointer;
   color: #666;
 }
+
+/* === AUTH MODAL === */
+.modal-content--auth {
+  max-width: 420px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 90%;
+}
+
+.modal-title {
+  margin: 0 0 24px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+}
+
+.auth-form .form-group {
+  margin-bottom: 16px;
+}
+.auth-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22, 62, 108, 0.12);
+}
+
+.form-error {
+  color: var(--accent);
+  background: #fff5f5;
+  border: 1px solid rgba(210, 10, 17, 0.2);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.form-group--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.form-group--checkbox input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--primary);
+}
+.form-group--checkbox label {
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn--full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+.btn--red {
+  background: #d20a11;
+  color: #fff;
+  border: none;
+}
+.btn--red:hover {
+  background: #a8080e;
+}
+
+.auth-links {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+.auth-links a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-links a:hover {
+  text-decoration: underline;
+}
+.auth-links span {
+  color: #ccc;
+  margin: 0 6px;
+}
+
+/* Адаптив модалки */
+@media (max-width: 480px) {
+  .modal-content--auth {
+    padding: 24px 20px;
+  }
+  .btn--full {
+    padding: 10px;
+  }
+}

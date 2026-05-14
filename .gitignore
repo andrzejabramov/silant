@@ -63,8 +63,8 @@ mypy_cache/
 ruff_cache/
 
 # Иное
-.sql
-.txt
-.xlsx
-"docs/Сервис \"Мой Силант\"/"
+*.sql
+*.txt
+*.xlsx
 get-pip.py
+*docs/Сервис*
