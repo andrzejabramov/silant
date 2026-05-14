@@ -61,3 +61,10 @@ htmlcov/
 .tox/
 mypy_cache/
 ruff_cache/
+
+# Иное
+.sql
+.txt
+.xlsx
+"docs/Сервис \"Мой Силант\"/"
+get-pip.py
