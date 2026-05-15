@@ -84,6 +84,22 @@ class MachineDetailView(DetailView):
         return context
 
 
+class MachineModalView(MachineAccessMixin, DetailView):
+    """Возвращает частичный шаблон модалки для HTMX"""
+
+    model = Machine  # Убедись, что Machine импортирована выше
+    template_name = "machines/partials/machine_modal.html"
+    context_object_name = "machine"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["maintenance_list"] = self.object.maintenance_records.all().order_by(
+            "-maintenance_date"
+        )
+        context["claims_list"] = self.object.claims.all().order_by("-failure_date")
+        return context
+
+
 @login_required
 def add_maintenance(request, machine_pk):
     machine = get_object_or_404(Machine, pk=machine_pk, is_deleted=False)

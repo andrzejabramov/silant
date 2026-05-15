@@ -231,6 +231,114 @@
       </div>
     </div>
 
+    <!-- 🔹 МОДАЛКА МАШИНЫ (полные данные с табами) -->
+    <div
+      id="machine-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      style="display: none"
+    >
+      <div
+        class="modal-content"
+        style="
+          max-width: 900px;
+          width: 95%;
+          background: #fff;
+          border-radius: 8px;
+          position: relative;
+          max-height: 85vh;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <button
+          type="button"
+          class="modal-close"
+          style="
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 10;
+            color: #333;
+          "
+        >
+          &times;
+        </button>
+
+        <!-- Табы навигации -->
+        <div
+          class="tab-nav"
+          style="
+            display: flex;
+            gap: 10px;
+            padding: 20px 24px 0;
+            border-bottom: 2px solid #d1cfc8;
+          "
+        >
+          <button
+            class="tab-btn active"
+            data-tab="tech"
+            style="
+              padding: 10px 16px;
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-weight: 500;
+              color: #666;
+              border-bottom: 3px solid #163e6c;
+            "
+          >
+            Тех. данные
+          </button>
+          <button
+            class="tab-btn"
+            data-tab="to"
+            style="
+              padding: 10px 16px;
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-weight: 500;
+              color: #666;
+              border-bottom: 3px solid transparent;
+            "
+          >
+            ТО
+          </button>
+          <button
+            class="tab-btn"
+            data-tab="claims"
+            style="
+              padding: 10px 16px;
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-weight: 500;
+              color: #666;
+              border-bottom: 3px solid transparent;
+            "
+          >
+            Рекламации
+          </button>
+        </div>
+
+        <!-- Контент с прокруткой -->
+        <div
+          id="machine-modal-body"
+          style="padding: 20px; overflow-y: auto; flex: 1; min-height: 200px"
+        >
+          <div style="text-align: center; padding: 40px; color: #666">
+            Загрузка данных...
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"
       defer

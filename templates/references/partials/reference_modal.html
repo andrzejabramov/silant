@@ -1,0 +1,47 @@
+<!-- templates/references/partials/reference_modal.html -->
+<div style="text-align: center; padding: 10px 0">
+  <h3
+    style="
+      color: var(--primary);
+      margin: 0 0 15px 0;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    "
+  >
+    {{ object|class_name|default:ref_type|title }}
+  </h3>
+
+  <div
+    style="
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    "
+  >
+    <p
+      style="
+        margin: 0 0 10px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #163e6c;
+      "
+    >
+      {{ object.name }}
+    </p>
+    {% if object.description %}
+    <p style="margin: 0; color: #555; line-height: 1.5; font-size: 0.95rem">
+      {{ object.description }}
+    </p>
+    {% else %}
+    <p style="margin: 0; color: #999; font-style: italic">
+      Описание не указано
+    </p>
+    {% endif %}
+  </div>
+
+  <p style="margin-top: 20px; font-size: 0.8rem; color: #888">
+    ID: {{ object.id }}
+  </p>
+</div>

@@ -6,11 +6,9 @@
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  min-height: var(--header-base-h);
+  min-height: (var(--header-base-h), 140px);
   background-color: #ebe5d6;
   color: #000000;
   z-index: 100;

@@ -1,29 +1,98 @@
-<div class="table-wrapper" style="overflow-x: auto; border-radius: 8px;">
-  <table style="min-width: 850px; width: 100%; border-collapse: collapse;">
+<div class="table-wrapper">
+  <table>
     <thead>
       <tr>
-        <th style="padding:12px;">Зав. №</th>
+        <th>Зав. № машины</th>
         <th>Модель техники</th>
-        <th>Клиент</th>
-        <th>Дата отгрузки</th>
-        <th>Сервисная компания</th>
-        <th style="min-width:100px; text-align:center;">Действие</th>
+        <th>Модель двигателя</th>
+        <th>Модель трансмиссии</th>
+        <th>Модель вед. моста</th>
+        <th>Модель упр. моста</th>
       </tr>
     </thead>
     <tbody>
       {% for machine in machines %}
       <tr>
-        <td style="padding:12px;">{{ machine.serial_number }}</td>
+        <!-- 1. Зав. № → Полная модалка машины -->
+        <td>
+          <span
+            class="interactive-cell"
+            hx-get="{% url 'machines:machine_modal_ajax' machine.id %}"
+            hx-target="#machine-modal-body"
+            hx-swap="innerHTML"
+            hx-trigger="click"
+            hx-on::after-request="openMachineModal()"
+          >
+            {{ machine.serial_number }}
+          </span>
+        </td>
+
+        <!-- 2. Модель техники → просто текст (не кликабельна) -->
         <td>{{ machine.technique_model.name }}</td>
-        <td>{{ machine.client.name|default:"—" }}</td>
-        <td>{{ machine.shipment_date|date:"d.m.Y" }}</td>
-        <td>{{ machine.service_company.name|default:"—" }}</td>
-        <td style="text-align:center;">
-          <a href="/machines/{{ machine.id }}/" class="btn" style="padding: 6px 12px; font-size: 0.85rem; background: var(--primary); text-decoration:none;">👁 Открыть</a>
+
+        <!-- 3-6. Агрегаты → Мини-модалка справочника -->
+        <!-- Двигатель -->
+        <td>
+          <span
+            class="interactive-cell"
+            hx-get="{% url 'references:reference_modal_ajax' 'engine' machine.engine_model.id %}"
+            hx-target="#reference-modal-body"
+            hx-swap="innerHTML"
+            hx-trigger="click"
+            hx-on::after-request="openReferenceModal()"
+          >
+            {{ machine.engine_model.name }}
+          </span>
+        </td>
+
+        <!-- Трансмиссия -->
+        <td>
+          <span
+            class="interactive-cell"
+            hx-get="{% url 'references:reference_modal_ajax' 'transmission' machine.transmission_model.id %}"
+            hx-target="#reference-modal-body"
+            hx-swap="innerHTML"
+            hx-trigger="click"
+            hx-on::after-request="openReferenceModal()"
+          >
+            {{ machine.transmission_model.name }}
+          </span>
+        </td>
+
+        <!-- Ведущий мост -->
+        <td>
+          <span
+            class="interactive-cell"
+            hx-get="{% url 'references:reference_modal_ajax' 'driving_axle' machine.driving_axle_model.id %}"
+            hx-target="#reference-modal-body"
+            hx-swap="innerHTML"
+            hx-trigger="click"
+            hx-on::after-request="openReferenceModal()"
+          >
+            {{ machine.driving_axle_model.name }}
+          </span>
+        </td>
+
+        <!-- Управляемый мост -->
+        <td>
+          <span
+            class="interactive-cell"
+            hx-get="{% url 'references:reference_modal_ajax' 'steerable_axle' machine.steerable_axle_model.id %}"
+            hx-target="#reference-modal-body"
+            hx-swap="innerHTML"
+            hx-trigger="click"
+            hx-on::after-request="openReferenceModal()"
+          >
+            {{ machine.steerable_axle_model.name }}
+          </span>
         </td>
       </tr>
       {% empty %}
-      <tr><td colspan="6" style="text-align:center; padding:20px; color:#666;">Машин не найдено</td></tr>
+      <tr>
+        <td colspan="6" style="text-align: center; padding: 20px; color: #666">
+          Машин не найдено
+        </td>
+      </tr>
       {% endfor %}
     </tbody>
   </table>

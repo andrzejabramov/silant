@@ -1,0 +1,1939 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$V49jLZGNTaSkJz9LATdTBp$mragAkTfxTRvWbsn9wyzya3RZaPH8qezJ66+DyMhLhE=",
+    "last_login": "2026-05-14T18:32:30.394Z",
+    "is_superuser": true,
+    "username": "superuser",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-11T14:32:31.412Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$EjqL4z6kiFArfV6TnSJodV$CL/fGT6jMH2dBq96987ZaMVagsdzx9vdqAFd3t65ihY=",
+    "last_login": "2026-05-14T18:19:46.085Z",
+    "is_superuser": false,
+    "username": "manage",
+    "first_name": "Менеджер",
+    "last_name": "Менеджеров",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-11T15:29:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Ovb6biyC6nuUcbJIRLIx7H$2MsNhYTubzUuuquhOCqFBPehnyvJkA3RjYPcxbfFNkE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "manage1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:00:08.873Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$XH2qtNgu1DRL8DkR2zLqTq$Q59MOO4k9vMlxbDevEeowuLu5Ow0oZ9LvBH3Zg4p4dI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "client_1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:01:20.350Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$pCo4R6VwIqCXKTEoYstD76$1jno7MpDmm8xO7bzD2Tea08DOIhDsax5TB+QL7mHsso=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "client_2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:01:49.664Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$RLkG7YKKL25WnebJQoKC7m$v0110HbapFCSAvDwUBUsowR6EeJn2barRq/nhzrCSd4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "client_3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:02:08.004Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$EOVgGxUCn0XUg1M6YIId41$t4FOyjYp7sV0nNsOaJ2ud0L+Gp6Q3mQeL1VBKKAvjXM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "client_4",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:02:33.816Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5grumxVGYd3WnGt9X17pF9$ieU57uCR6YuZcUvzby/cj+inoRBUB+LKSKDUKMx071U=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "client_5",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:02:53.280Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$xp2820f320KhJH46m3nFLZ$nndh13kHHw+SKr6gFM7FLJLbmlYDKB6eTNCox1gopu8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "serv",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:04:09.400Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$OzRkKOllcSOTT7HalPOvRC$WU2hXuzYNyOpEPPuLe5l7lyiCxl3qh3TYxlTq7pPN9U=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "serv1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:05:25.852Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$str9tuwsjomhbNiZ4ehjhm$pyJ/KSh9ZNrfbrZT5jr3QgpOc5ZPTDTvZK6thD0iYqw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "serv_2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-12T17:05:45.130Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9fkyzhv9dl4lnjz5e57aab6cfus500rc",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAUBf-la9PcQhFw6Z5vaO7TogYSCivjvysJC92emTkvl3Bbc9qKLmkUd3HBnX43Qn7otAO543SbPc_Tuozkd8UftPhhFn1eD_fvIGPJ35qg6mvtlYwwhCZQZYEjM1uNZiimnRCDRVCLbSvAAZqOYoty5g7UvT8lxDmZ:1wNarG:yQvkr8qwf8D84at8xFwSFnjB8-ZyP37OKmCgD0Phg64",
+    "expire_date": "2026-05-28T18:32:30.397Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fbp106c3e5764otb0c2lt6vmlnr2kl58",
+  "fields": {
+    "session_data": ".eJxVkMFOwzAMht_F56pK1nTpeuTOEyBUOY5DAyyp4lSApr07C-yym3__n7-DL4BEeU91wb2unGokrDGn5cx1zV5gfrnA_wwzbCjylYuHDrDCrK2dRmvsoPrRHq3tYBcuCc98Y2XfuLQM19cO_vRLi0tsJg0PO4f0wakV_h3TW-4pp1qi6xvS31vpn7Pnz6c7-yBYUdbbtVOH08AndsGh1qN2h6DJEFEYMAT0gSfvSAWjOBhrvSKtxskZi_5Ik-ImFRZpH-DvLZYfmNX1Fx47Y28:1wMiXC:cloY33dAjiaU7bQneGo9-2ZJ0nrXniboBoqRJv2C0qY",
+    "expire_date": "2026-05-26T08:32:10.585Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "grn58u4ks73e2zpbrj4a8o1k8ttn0pmm",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgFKhL956BzMCMVA0kpV0Z765NutDtf-_9l4iwrSVunZY4Z3EWWpx-N4T0oLqDfId6azK1ui4zyl2RB-3y2jI9L4f7d1Cgl29Nls2kMyDiQOjQe2A1KD2qMGU2OnMAxcZb4mAGAscK3GhBIyA7n8T7AwY0ON4:1wMSf6:XQM46-GguhPD7bmjpitU4t7xEQYvODggvfoveahsoAM",
+    "expire_date": "2026-05-25T15:35:16.202Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ta1cvioe988yklqsea0sid3sfj0rkfwb",
+  "fields": {
+    "session_data": ".eJxVkM1uxCAMhN_F5wjB5geSY-99gqqKjDENbRciIGqr1b57l3Yve_N4Ps9IvgASpSPWFY-6cayBsIYU1zPXLbkCy8sF_mdYYMdSvlJ20AFWWJTWZjTTbLQwRk5jrzo4CueIZ77R5dg5Nw3X1w7-CtYm19CyFDzsLNIHx2a4d4xvSVCKNQcrGiLubhHPyfHn0519CNiwbLdrK09zzzNbb1GpUdmTVzQQke_Re3SejbMk_SDZD1o7SUqOxg4a3URGcgstXEr7AX_vIf_AIq-_sZdj3w:1wMlit:Ma99xakg8mqcwxDhyLMO9BHcHB8-k3ddA6OpuAbiHwE",
+    "expire_date": "2026-05-26T11:56:27.900Z"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "1ee6ef86-803c-415d-862f-56368345fc35",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "a868b63f-de8e-42db-9d88-841bc3c46a3f",
+    "failure_date": "2022-05-05",
+    "operating_hours": "38.00",
+    "failure_node": "ff0932f3-a6a7-4804-90aa-1abf903fec68",
+    "failure_description": "разрушение подшипника",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "подшипник",
+    "restoration_date": "2022-05-07",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "320a4962-c7c6-409e-a7b6-ff1887541ab7",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+    "failure_date": "2022-04-02",
+    "operating_hours": "129.00",
+    "failure_node": "c68b7fce-ebf9-4308-b46a-2ca166ee9a60",
+    "failure_description": "проскальзывание",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "шестерня ведущая",
+    "restoration_date": "2022-04-07",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "3fd02f16-7c61-4b05-bd23-ac0e1655898d",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+    "failure_date": "2022-03-30",
+    "operating_hours": "112.00",
+    "failure_node": "c68b7fce-ebf9-4308-b46a-2ca166ee9a60",
+    "failure_description": "блокировка колес",
+    "restoration_method": "9cc69914-248c-4426-ae50-a7f2f742af4b",
+    "spare_parts_used": null,
+    "restoration_date": "2022-03-31",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "72fa5d49-9771-4015-ae09-6ebf56c5e984",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "3d83c0fd-9221-4264-9fdb-7f473fc5a112",
+    "failure_date": "2022-06-17",
+    "operating_hours": "112.00",
+    "failure_node": "ff0932f3-a6a7-4804-90aa-1abf903fec68",
+    "failure_description": "разрушение подшипника",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "подшипник",
+    "restoration_date": "2022-06-25",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "9054118b-bc35-4c88-9694-86f3116861d1",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "c99319cd-b823-42b3-874c-7f0fe2bd6c22",
+    "failure_date": "2022-07-28",
+    "operating_hours": "56.00",
+    "failure_node": "1a2fcec6-8d05-4fa2-a385-82242d9dc54f",
+    "failure_description": "течь масла",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "прокладки",
+    "restoration_date": "2022-08-01",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "9ceb223a-4747-4eaf-b83d-9700ca9fbf10",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+    "failure_date": "2021-10-26",
+    "operating_hours": "142.00",
+    "failure_node": "ff0932f3-a6a7-4804-90aa-1abf903fec68",
+    "failure_description": "разрушение подшипника",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "подшипник",
+    "restoration_date": "2021-11-02",
+    "status": "resolved",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "9d30f973-45eb-4904-8541-a923dbebab52",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+    "failure_date": "2022-04-01",
+    "operating_hours": "123.00",
+    "failure_node": "1a2fcec6-8d05-4fa2-a385-82242d9dc54f",
+    "failure_description": "повышенный шум",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "прокладки, прочие материалы",
+    "restoration_date": "2022-04-08",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "9faf383a-c543-47ab-a386-98ad10e3a38e",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "af27df10-8f52-410d-b056-46bd67496773",
+    "failure_date": "2022-09-07",
+    "operating_hours": "47.00",
+    "failure_node": "d9b961bc-579b-4a6f-993d-839f9cd5ee34",
+    "failure_description": "течь масла",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "прокладки",
+    "restoration_date": "2022-09-09",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "d0638755-7c8f-409e-b834-d58b7c391c8b",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "48e44198-6e70-4ddc-9aba-cf6e11c07ee4",
+    "failure_date": "2022-02-01",
+    "operating_hours": "22.00",
+    "failure_node": "1a2fcec6-8d05-4fa2-a385-82242d9dc54f",
+    "failure_description": "не заводится",
+    "restoration_method": "9cc69914-248c-4426-ae50-a7f2f742af4b",
+    "spare_parts_used": null,
+    "restoration_date": "2022-02-10",
+    "status": "resolved",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "efb50332-7ae6-4d93-8dc0-dab083e3c524",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "afc07775-0d4a-46df-855b-f146827bc76a",
+    "failure_date": "2022-02-06",
+    "operating_hours": "123.00",
+    "failure_node": "530c7532-104c-4b62-a88b-8bb7f78935d7",
+    "failure_description": "блокировка колес",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "колесо",
+    "restoration_date": "2022-02-11",
+    "status": "resolved",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "f179f404-7c82-4a81-99e6-c3bd593fa36e",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+    "failure_date": "2021-10-11",
+    "operating_hours": "59.00",
+    "failure_node": "1a2fcec6-8d05-4fa2-a385-82242d9dc54f",
+    "failure_description": "течь масла",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "прокладки",
+    "restoration_date": "2021-10-21",
+    "status": "resolved",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "claims.claim",
+  "pk": "fe42bf07-626e-4038-b4cc-5242fb113add",
+  "fields": {
+    "created_at": "2026-05-13T15:14:52.516Z",
+    "updated_at": "2026-05-13T15:14:52.516Z",
+    "is_deleted": false,
+    "machine": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+    "failure_date": "2021-12-31",
+    "operating_hours": "61.00",
+    "failure_node": "7708beec-d62c-41ad-b195-d19f42226a80",
+    "failure_description": "разрушение верхнего ролика",
+    "restoration_method": "b72ef593-574a-41ec-9016-9563471505c3",
+    "spare_parts_used": "ролик",
+    "restoration_date": "2022-01-05",
+    "status": "resolved",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "3d83c0fd-9221-4264-9fdb-7f473fc5a112",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0032",
+    "technique_model": "7be09956-b074-4d10-a939-406219610b3d",
+    "engine_serial": "2MU2983",
+    "engine_model": "38469e6a-2663-4798-b777-c5ccbe90d38e",
+    "transmission_serial": "21K0116785",
+    "transmission_model": "0584c5ea-7156-46c8-af35-b2c4ba68e226",
+    "driving_axle_serial": "21K0115910",
+    "driving_axle_model": "2c2b585f-518a-486f-a9ab-1f4c729fd0d3",
+    "steerable_axle_serial": "00070422",
+    "steerable_axle_model": "84847a61-4bf5-4e99-ac75-356a836c2d44",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-05-27",
+    "recipient": "ФРП России",
+    "operation_address": "г. Челябинск, в/ч ",
+    "equipment_options": "1. Кабина с отопителем; 2. Медицинская аптечка; 3. Проблесковый маячок; 4. Знак аварийной остановки; 5. Огнетушитель порошковый 5п;",
+    "client": "90b1d1d8-da81-4177-86a0-6122d7476a4e",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "48e44198-6e70-4ddc-9aba-cf6e11c07ee4",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0019",
+    "technique_model": "bd7c0c5d-2a41-42e5-a258-503c196e7b2a",
+    "engine_serial": "112893",
+    "engine_model": "569e729e-61a3-401b-9b14-c4bb8d1cb1ae",
+    "transmission_serial": "20H0069",
+    "transmission_model": "fa7952fe-40f4-4adc-a389-3bd6d5f5b395",
+    "driving_axle_serial": "20H0041",
+    "driving_axle_model": "2162db62-0df5-4aff-90aa-a21d337bfa14",
+    "steerable_axle_serial": "KDBAC9687",
+    "steerable_axle_model": "d8b38c4c-052d-4b94-b018-0d395ad0a267",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-01-28",
+    "recipient": "АО \"Т-Минус\"",
+    "operation_address": "г. Первоуральск, Свердловской обл.",
+    "equipment_options": "1. Высота подъёма вил - 4 500мм; 2. Центральный цилиндр подъёма ; 3. Кабина с отопителем; 4. Стрела безблочная Г-образная;",
+    "client": "90b1d1d8-da81-4177-86a0-6122d7476a4e",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0008",
+    "technique_model": "7be09956-b074-4d10-a939-406219610b3d",
+    "engine_serial": "2ME0753",
+    "engine_model": "38469e6a-2663-4798-b777-c5ccbe90d38e",
+    "transmission_serial": "21D0108269",
+    "transmission_model": "0584c5ea-7156-46c8-af35-b2c4ba68e226",
+    "driving_axle_serial": "21D0108011",
+    "driving_axle_model": "2c2b585f-518a-486f-a9ab-1f4c729fd0d3",
+    "steerable_axle_serial": "0821005",
+    "steerable_axle_model": "84847a61-4bf5-4e99-ac75-356a836c2d44",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2021-09-30",
+    "recipient": "ООО \"ГП Краснодар\"",
+    "operation_address": "г. Краснодар",
+    "equipment_options": "1. Кабина с отопителем;",
+    "client": "7b08e493-d0b9-4c94-b9dd-4a78cdcc1341",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0003",
+    "technique_model": "7be09956-b074-4d10-a939-406219610b3d",
+    "engine_serial": "2ME0639",
+    "engine_model": "38469e6a-2663-4798-b777-c5ccbe90d38e",
+    "transmission_serial": "21D0108264",
+    "transmission_model": "0584c5ea-7156-46c8-af35-b2c4ba68e226",
+    "driving_axle_serial": "21D0107988",
+    "driving_axle_model": "2c2b585f-518a-486f-a9ab-1f4c729fd0d3",
+    "steerable_axle_serial": "0821004",
+    "steerable_axle_model": "84847a61-4bf5-4e99-ac75-356a836c2d44",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2021-09-30",
+    "recipient": "ООО \"Ранский ЛПХ\"",
+    "operation_address": "п. Опарино, Кировская обл.",
+    "equipment_options": "Стандарт",
+    "client": "59dcd066-8177-4f07-a395-ff687ac5d471",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0016",
+    "technique_model": "3b17c9b9-ba10-4404-8c52-7786ab9b86e6",
+    "engine_serial": "049827",
+    "engine_model": "eb79b0e4-5eda-4ed2-ab0a-21227eb9f796",
+    "transmission_serial": "21D0108256",
+    "transmission_model": "83062c09-0ced-4f7c-9585-ba07e461e477",
+    "driving_axle_serial": "21D0108000",
+    "driving_axle_model": "334bfef7-1414-4d2d-ace9-641cf13dbaec",
+    "steerable_axle_serial": "21D0093244",
+    "steerable_axle_model": "a3a23260-8b38-4d83-862b-4157784b9a27",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2021-12-20",
+    "recipient": "ООО \"ГП СПБ\"",
+    "operation_address": "г. Санкт-Петербург",
+    "equipment_options": "1. Кабина с отопителем; 2. Каретка смещения + гидролинии;",
+    "client": "7b08e493-d0b9-4c94-b9dd-4a78cdcc1341",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "a868b63f-de8e-42db-9d88-841bc3c46a3f",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0027",
+    "technique_model": "bd7c0c5d-2a41-42e5-a258-503c196e7b2a",
+    "engine_serial": "167733",
+    "engine_model": "569e729e-61a3-401b-9b14-c4bb8d1cb1ae",
+    "transmission_serial": "20H0070",
+    "transmission_model": "fa7952fe-40f4-4adc-a389-3bd6d5f5b395",
+    "driving_axle_serial": "20H0049",
+    "driving_axle_model": "2162db62-0df5-4aff-90aa-a21d337bfa14",
+    "steerable_axle_serial": "KDBAH6583",
+    "steerable_axle_model": "d8b38c4c-052d-4b94-b018-0d395ad0a267",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-04-28",
+    "recipient": "ООО \"Мосгоррест\"",
+    "operation_address": "г. Санкт-Петербург",
+    "equipment_options": "1. Кабина с отопителем",
+    "client": "451c2e60-d41c-4da0-83b6-3a4a727a222c",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "af27df10-8f52-410d-b056-46bd67496773",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0045",
+    "technique_model": "2ae664cf-d51b-4e89-bb1d-6383914f6648",
+    "engine_serial": "000003",
+    "engine_model": "ff2901af-56fa-45e7-ba67-64b17290182e",
+    "transmission_serial": "22B0008",
+    "transmission_model": "5206a2df-a726-449b-9e48-c946d3a6bd20",
+    "driving_axle_serial": "22B3370",
+    "driving_axle_model": "8d1af918-a5ac-406c-86a4-0c76612cddcc",
+    "steerable_axle_serial": "00200622",
+    "steerable_axle_model": "a3a23260-8b38-4d83-862b-4157784b9a27",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-08-30",
+    "recipient": "АО Зандер",
+    "operation_address": "г. Краснодар",
+    "equipment_options": "1. Кабина с отопителем; 2. Каретка бокового смещения 1050мм; 3. Блокировка реверса хода; 4. Высота подъёма вил - 4800мм; 5. Прибор комбинированный КД8235;",
+    "client": "a6f884e4-efe8-4d93-8d6c-72da18951a23",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "afc07775-0d4a-46df-855b-f146827bc76a",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0021",
+    "technique_model": "bd7c0c5d-2a41-42e5-a258-503c196e7b2a",
+    "engine_serial": "112890",
+    "engine_model": "569e729e-61a3-401b-9b14-c4bb8d1cb1ae",
+    "transmission_serial": "20H0066",
+    "transmission_model": "fa7952fe-40f4-4adc-a389-3bd6d5f5b395",
+    "driving_axle_serial": "20H0039",
+    "driving_axle_model": "2162db62-0df5-4aff-90aa-a21d337bfa14",
+    "steerable_axle_serial": "KDBAC9685",
+    "steerable_axle_model": "d8b38c4c-052d-4b94-b018-0d395ad0a267",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-01-14",
+    "recipient": "ООО \"ДЭТ №13\"",
+    "operation_address": "с. Акуловка, Московская обл.",
+    "equipment_options": "Стандарт",
+    "client": "90b1d1d8-da81-4177-86a0-6122d7476a4e",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0017",
+    "technique_model": "963dd6e0-46cf-4d1e-9f24-3aa15ffd43f8",
+    "engine_serial": "7ML1035",
+    "engine_model": "895d5ede-8350-4739-8078-3b1281130d16",
+    "transmission_serial": "21D0108251",
+    "transmission_model": "83062c09-0ced-4f7c-9585-ba07e461e477",
+    "driving_axle_serial": "21D0107997",
+    "driving_axle_model": "334bfef7-1414-4d2d-ace9-641cf13dbaec",
+    "steerable_axle_serial": "21D0093265",
+    "steerable_axle_model": "a3a23260-8b38-4d83-862b-4157784b9a27",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-03-09",
+    "recipient": "ИП Трудников С.В.",
+    "operation_address": "п. Знаменский, Респ. Марий Эл",
+    "equipment_options": "1. Гидролинии с БРС; 2. Дополнительеная установка кабины",
+    "client": "538bb65e-80ee-4ef6-9519-f47f53376825",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "machines.machine",
+  "pk": "c99319cd-b823-42b3-874c-7f0fe2bd6c22",
+  "fields": {
+    "created_at": "2026-05-13T15:10:29.421Z",
+    "updated_at": "2026-05-13T15:10:29.421Z",
+    "is_deleted": false,
+    "serial_number": "0039",
+    "technique_model": "69e6de38-9ac8-463a-b38d-98fe4a854f7f",
+    "engine_serial": "000015",
+    "engine_model": "ff2901af-56fa-45e7-ba67-64b17290182e",
+    "transmission_serial": "22B0001",
+    "transmission_model": "5206a2df-a726-449b-9e48-c946d3a6bd20",
+    "driving_axle_serial": "22B3364",
+    "driving_axle_model": "8d1af918-a5ac-406c-86a4-0c76612cddcc",
+    "steerable_axle_serial": "00010622",
+    "steerable_axle_model": "a3a23260-8b38-4d83-862b-4157784b9a27",
+    "supply_contract_number": null,
+    "supply_contract_date": null,
+    "shipment_date": "2022-07-18",
+    "recipient": "ФСН России",
+    "operation_address": "г. Москва",
+    "equipment_options": "1. Высота подъёма вил - 4 500мм; 2. Кабина с отопителем; 3. Шины суперэластик; 4. Прибор комбинированный КД8235;",
+    "client": "8fd3244e-c9bd-4c3c-8bfa-079ef207b356",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "01febfe0-7271-4c38-9391-4d81888a634a",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "48e44198-6e70-4ddc-9aba-cf6e11c07ee4",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-03-02",
+    "operating_hours": "219.00",
+    "work_order_number": "#2022-38КЕ68СИЛ",
+    "work_order_date": "2022-02-28",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "074ee18f-4b13-416b-8a22-259d4592ca52",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2021-12-10",
+    "operating_hours": "450.00",
+    "work_order_number": "#2022-72КЕ68СИЛ",
+    "work_order_date": "2021-12-08",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "0de3aa15-58fc-4e5c-8249-2f46404ee5c6",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "3d83c0fd-9221-4264-9fdb-7f473fc5a112",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-06-01",
+    "operating_hours": "55.00",
+    "work_order_number": "#2022-10КЕ19СИЛ",
+    "work_order_date": "2022-05-30",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "1d921a53-ffa2-4ba2-be3e-32f18f904128",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2021-10-05",
+    "operating_hours": "54.00",
+    "work_order_number": "#2022-97КЕ18СИЛ",
+    "work_order_date": "2021-10-03",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "2345cd0b-6665-4beb-be30-b65218abd432",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "afc07775-0d4a-46df-855b-f146827bc76a",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-03-26",
+    "operating_hours": "403.00",
+    "work_order_number": "#2022-42КЕ6СИЛ",
+    "work_order_date": "2022-03-24",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "23a7f2bc-48c9-47ad-ba15-ad4aee43a21e",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+    "maintenance_type": "7e0a5b37-bf1e-415f-b116-62419cd4a10a",
+    "maintenance_date": "2022-09-01",
+    "operating_hours": "2053.00",
+    "work_order_number": "#2022-99КЕ12СИЛ",
+    "work_order_date": "2022-08-30",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "2e7da379-63c2-4c2b-b53c-d2d3e35518ac",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "afc07775-0d4a-46df-855b-f146827bc76a",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-02-16",
+    "operating_hours": "221.00",
+    "work_order_number": "#2022-5КЕ78СИЛ",
+    "work_order_date": "2022-02-14",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "32d00ba5-dde2-47cf-a29f-9a2db31fd80a",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:43:24.223Z",
+    "is_deleted": false,
+    "machine": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-05-19",
+    "operating_hours": "405.00",
+    "work_order_number": "#2022-77КЕ23СИЛ",
+    "work_order_date": "2022-05-17",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "395f4ca8-872a-4e20-b7e2-addea98247a5",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "a868b63f-de8e-42db-9d88-841bc3c46a3f",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-07-08",
+    "operating_hours": "441.00",
+    "work_order_number": "#2022-84КЕ73СИЛ",
+    "work_order_date": "2022-07-06",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "397e924e-40be-4b84-a3fd-0720a7642082",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-03-01",
+    "operating_hours": "407.00",
+    "work_order_number": "#2022-16КЕ6СИЛ",
+    "work_order_date": "2022-02-27",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "3ad8b719-0dbb-475c-a2d8-bd13b9ef9510",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "48e44198-6e70-4ddc-9aba-cf6e11c07ee4",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-02-02",
+    "operating_hours": "55.00",
+    "work_order_number": "#2022-6КЕ38СИЛ",
+    "work_order_date": "2022-01-31",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "57b70505-b18d-4d29-8c37-351dd6d3d44e",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2021-12-10",
+    "operating_hours": "422.00",
+    "work_order_number": "#2022-97КЕ11СИЛ",
+    "work_order_date": "2021-12-08",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "59f07a7b-a25b-4a2b-af29-17c041dd03b2",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "a868b63f-de8e-42db-9d88-841bc3c46a3f",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-05-31",
+    "operating_hours": "214.00",
+    "work_order_number": "#2022-31КЕ19СИЛ",
+    "work_order_date": "2022-05-29",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "5c3e619f-f7ff-40ae-9565-6f0644ad6661",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:43:53.129Z",
+    "is_deleted": false,
+    "machine": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-03-14",
+    "operating_hours": "53.00",
+    "work_order_number": "#2022-70КЕ87СИЛ",
+    "work_order_date": "2022-03-12",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "6231001b-c566-471e-8a0b-262546923e04",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+    "maintenance_type": "7e39a9e8-a3d9-4971-a1c9-e58e64f3d70a",
+    "maintenance_date": "2022-02-13",
+    "operating_hours": "1054.00",
+    "work_order_number": "#2022-56КЕ54СИЛ",
+    "work_order_date": "2022-02-11",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "73b9092d-908f-4760-ba88-f0db07cfa16f",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:42:58.454Z",
+    "is_deleted": false,
+    "machine": "af27df10-8f52-410d-b056-46bd67496773",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-10-02",
+    "operating_hours": "202.00",
+    "work_order_number": "#2022-98КЕ93СИЛ",
+    "work_order_date": "2022-09-30",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "7533d51e-107c-48af-9238-4be9d105fd8d",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "a868b63f-de8e-42db-9d88-841bc3c46a3f",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-05-03",
+    "operating_hours": "52.00",
+    "work_order_number": "#2022-21КЕ82СИЛ",
+    "work_order_date": "2022-05-01",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "769880e6-f33b-4d7b-a37b-bd375d15791b",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:42:41.100Z",
+    "is_deleted": false,
+    "machine": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+    "maintenance_type": "7e0a5b37-bf1e-415f-b116-62419cd4a10a",
+    "maintenance_date": "2022-11-21",
+    "operating_hours": "2010.00",
+    "work_order_number": "#2022-78КЕ54СИЛ",
+    "work_order_date": "2022-11-19",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "8bbd36d8-bb00-4e23-b5bc-03c1b88c85b0",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:43:33.360Z",
+    "is_deleted": false,
+    "machine": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+    "maintenance_type": "7e39a9e8-a3d9-4971-a1c9-e58e64f3d70a",
+    "maintenance_date": "2022-05-05",
+    "operating_hours": "1011.00",
+    "work_order_number": "#2022-22КЕ87СИЛ",
+    "work_order_date": "2022-05-03",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "8d9daec5-ed57-47e1-8347-53de834f1e6d",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2021-11-02",
+    "operating_hours": "220.00",
+    "work_order_number": "#2022-81КЕ66СИЛ",
+    "work_order_date": "2021-10-31",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "a1503278-6b9f-4a07-8e29-29354bcdf149",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:42:22.132Z",
+    "is_deleted": false,
+    "machine": "c99319cd-b823-42b3-874c-7f0fe2bd6c22",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-08-20",
+    "operating_hours": "206.00",
+    "work_order_number": "#2022-26КЕ57СИЛ",
+    "work_order_date": "2022-08-18",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "a20b05c5-e3c3-4b40-ad9f-851175c115ee",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2021-11-02",
+    "operating_hours": "225.00",
+    "work_order_number": "#2022-54КЕ17СИЛ",
+    "work_order_date": "2021-10-31",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "ad572c11-19b9-44b1-bff0-9a1ddf233ffc",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:42:31.909Z",
+    "is_deleted": false,
+    "machine": "c99319cd-b823-42b3-874c-7f0fe2bd6c22",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-07-23",
+    "operating_hours": "54.00",
+    "work_order_number": "#2022-72КЕ89СИЛ",
+    "work_order_date": "2022-07-21",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "af5fc3d7-8296-4e91-9c34-3913aa7b5cfd",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:42:50.926Z",
+    "is_deleted": false,
+    "machine": "af27df10-8f52-410d-b056-46bd67496773",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-11-09",
+    "operating_hours": "402.00",
+    "work_order_number": "#2022-82КЕ69СИЛ",
+    "work_order_date": "2022-11-07",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "c15634a9-26ad-420b-acc1-1392f831c7d6",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "48e44198-6e70-4ddc-9aba-cf6e11c07ee4",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-04-09",
+    "operating_hours": "405.00",
+    "work_order_number": "#2022-34КЕ62СИЛ",
+    "work_order_date": "2022-04-07",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "c49eaa2c-44f2-4c35-b022-9944ca4cc841",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "7c17a95c-5ca8-4dbe-a035-b2e4b593a42b",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2021-10-05",
+    "operating_hours": "55.00",
+    "work_order_number": "#2022-32КЕ5СИЛ",
+    "work_order_date": "2021-10-03",
+    "service_company": "b13837bd-5c63-4eb2-94c0-396af6463bb0"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "ccb827ee-0418-42fd-b59a-6da6cbdbc8f5",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "3d83c0fd-9221-4264-9fdb-7f473fc5a112",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-06-29",
+    "operating_hours": "216.00",
+    "work_order_number": "#2022-92КЕ16СИЛ",
+    "work_order_date": "2022-06-27",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "d257e94f-837e-4327-8d73-0ec5da68390d",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "3d83c0fd-9221-4264-9fdb-7f473fc5a112",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-08-06",
+    "operating_hours": "434.00",
+    "work_order_number": "#2022-55КЕ37СИЛ",
+    "work_order_date": "2022-08-04",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "d6935789-9a3a-44fc-a38d-289939bc25d7",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "afc07775-0d4a-46df-855b-f146827bc76a",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-01-19",
+    "operating_hours": "52.00",
+    "work_order_number": "#2022-27КЕ67СИЛ",
+    "work_order_date": "2022-01-17",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "e7da0113-6b3a-469b-a963-8f535fa4cece",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:43:05.811Z",
+    "is_deleted": false,
+    "machine": "c99319cd-b823-42b3-874c-7f0fe2bd6c22",
+    "maintenance_type": "9670d7da-598b-4216-b543-985624c817dc",
+    "maintenance_date": "2022-09-27",
+    "operating_hours": "407.00",
+    "work_order_number": "#2022-54КЕ66СИЛ",
+    "work_order_date": "2022-09-25",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "e94b05bc-e70f-4e65-82ce-f80b3180254f",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+    "maintenance_type": "7e39a9e8-a3d9-4971-a1c9-e58e64f3d70a",
+    "maintenance_date": "2022-02-13",
+    "operating_hours": "1026.00",
+    "work_order_number": "#2022-88КЕ66СИЛ",
+    "work_order_date": "2022-02-11",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "e9f9c2db-0a8e-4861-8434-8b200fba0947",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2021-12-25",
+    "operating_hours": "53.00",
+    "work_order_number": "#2022-77КЕ66СИЛ",
+    "work_order_date": "2021-12-23",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "ee418156-8e00-4854-ba0c-bca16939be0e",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:43:43.509Z",
+    "is_deleted": false,
+    "machine": "bd6b0490-35ff-4eb2-8b21-6d915f7a158f",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-04-11",
+    "operating_hours": "210.00",
+    "work_order_number": "#2022-16КЕ87СИЛ",
+    "work_order_date": "2022-04-09",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "f0be3b42-2cf1-4178-a5b7-40b16c0ebdd4",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-14T18:43:13.042Z",
+    "is_deleted": false,
+    "machine": "af27df10-8f52-410d-b056-46bd67496773",
+    "maintenance_type": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+    "maintenance_date": "2022-09-04",
+    "operating_hours": "53.00",
+    "work_order_number": "#2022-58КЕ94СИЛ",
+    "work_order_date": "2022-09-02",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "f5a6b5f6-3d6f-4160-8c42-6c961d7528b2",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "77ac4a5c-086a-47ce-a5fe-eae1c45ffa89",
+    "maintenance_type": "7e0a5b37-bf1e-415f-b116-62419cd4a10a",
+    "maintenance_date": "2022-09-01",
+    "operating_hours": "2025.00",
+    "work_order_number": "#2022-50КЕ10СИЛ",
+    "work_order_date": "2022-08-30",
+    "service_company": "554263a8-5c08-4035-857a-d17ce65208a8"
+  }
+},
+{
+  "model": "maintenance.maintenance",
+  "pk": "fc0421fd-a0ad-4e59-b75c-9dd9b85bcef1",
+  "fields": {
+    "created_at": "2026-05-13T15:11:01.800Z",
+    "updated_at": "2026-05-13T15:11:01.800Z",
+    "is_deleted": false,
+    "machine": "97277aac-9a98-4a2c-ad36-8e11db0c2c33",
+    "maintenance_type": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+    "maintenance_date": "2022-01-22",
+    "operating_hours": "221.00",
+    "work_order_number": "#2022-96КЕ82СИЛ",
+    "work_order_date": "2022-01-20",
+    "service_company": "87a7f812-835b-4b92-9c7e-6a150cd287e8"
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "451c2e60-d41c-4da0-83b6-3a4a727a222c",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"МНС77\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "538bb65e-80ee-4ef6-9519-f47f53376825",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ИП Трудников С.В.",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "554263a8-5c08-4035-857a-d17ce65208a8",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-14T18:40:08.291Z",
+    "is_deleted": false,
+    "name": "ООО ХНС",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "59dcd066-8177-4f07-a395-ff687ac5d471",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"Ранский ЛПХ\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "7b08e493-d0b9-4c94-b9dd-4a78cdcc1341",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"Комплект-Поставка\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "87a7f812-835b-4b92-9c7e-6a150cd287e8",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО Силант",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "8fd3244e-c9bd-4c3c-8bfa-079ef207b356",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"РМК\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "90b1d1d8-da81-4177-86a0-6122d7476a4e",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-14T18:39:53.020Z",
+    "is_deleted": false,
+    "name": "ООО \"ХПК21\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "9b60b6fe-bc0e-4118-8491-d758f3ee4026",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"ГП Краснодар\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "a36539b1-afed-4614-8302-f55aba6ed579",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-14T18:40:16.035Z",
+    "is_deleted": false,
+    "name": "ХРП России",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "a6f884e4-efe8-4d93-8d6c-72da18951a23",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "АО \"Зандер\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "b004657b-101e-4d90-83de-2ecad25369d7",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"ДЭТ №13\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "b13837bd-5c63-4eb2-94c0-396af6463bb0",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО Промышленная техника",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "b8fb6caf-0cc2-4109-aede-6d0ba4f089f9",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "АО \"Т-Минус\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "c36afa93-0cc2-4c72-81f8-f9aa56eee62c",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-14T18:40:26.336Z",
+    "is_deleted": false,
+    "name": "ХСН России",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "d4fff832-d020-446d-acf3-78a40b1935ab",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"ГП СПБ\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "organizations.organization",
+  "pk": "ed3fbc55-2c6c-41f1-a68a-ae5ea0778d0b",
+  "fields": {
+    "created_at": "2026-05-13T15:09:11.322Z",
+    "updated_at": "2026-05-13T15:09:11.322Z",
+    "is_deleted": false,
+    "name": "ООО \"Мосгоррест\"",
+    "contact_email": null,
+    "phone": null
+  }
+},
+{
+  "model": "references.techniquemodel",
+  "pk": "2ae664cf-d51b-4e89-bb1d-6383914f6648",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ПД2,5",
+    "description": null
+  }
+},
+{
+  "model": "references.techniquemodel",
+  "pk": "3b17c9b9-ba10-4404-8c52-7786ab9b86e6",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ПГ1,5",
+    "description": null
+  }
+},
+{
+  "model": "references.techniquemodel",
+  "pk": "69e6de38-9ac8-463a-b38d-98fe4a854f7f",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ПД2,0",
+    "description": null
+  }
+},
+{
+  "model": "references.techniquemodel",
+  "pk": "7be09956-b074-4d10-a939-406219610b3d",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ПД3,0",
+    "description": null
+  }
+},
+{
+  "model": "references.techniquemodel",
+  "pk": "963dd6e0-46cf-4d1e-9f24-3aa15ffd43f8",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ПД1,5",
+    "description": null
+  }
+},
+{
+  "model": "references.techniquemodel",
+  "pk": "bd7c0c5d-2a41-42e5-a258-503c196e7b2a",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ПД5,0",
+    "description": null
+  }
+},
+{
+  "model": "references.enginemodel",
+  "pk": "38469e6a-2663-4798-b777-c5ccbe90d38e",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "Kubota V3300",
+    "description": null
+  }
+},
+{
+  "model": "references.enginemodel",
+  "pk": "569e729e-61a3-401b-9b14-c4bb8d1cb1ae",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "ММЗ Д-243",
+    "description": null
+  }
+},
+{
+  "model": "references.enginemodel",
+  "pk": "895d5ede-8350-4739-8078-3b1281130d16",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "Kubota D1803",
+    "description": null
+  }
+},
+{
+  "model": "references.enginemodel",
+  "pk": "eb79b0e4-5eda-4ed2-ab0a-21227eb9f796",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "Nissan K21",
+    "description": null
+  }
+},
+{
+  "model": "references.enginemodel",
+  "pk": "ff2901af-56fa-45e7-ba67-64b17290182e",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.352Z",
+    "updated_at": "2026-05-13T15:05:33.352Z",
+    "is_deleted": false,
+    "name": "MMZ-4D",
+    "description": null
+  }
+},
+{
+  "model": "references.transmissionmodel",
+  "pk": "0584c5ea-7156-46c8-af35-b2c4ba68e226",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.353Z",
+    "updated_at": "2026-05-13T15:05:33.353Z",
+    "is_deleted": false,
+    "name": "10VB-00106",
+    "description": null
+  }
+},
+{
+  "model": "references.transmissionmodel",
+  "pk": "5206a2df-a726-449b-9e48-c946d3a6bd20",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.353Z",
+    "updated_at": "2026-05-13T15:05:33.353Z",
+    "is_deleted": false,
+    "name": "HF30-VP010",
+    "description": null
+  }
+},
+{
+  "model": "references.transmissionmodel",
+  "pk": "83062c09-0ced-4f7c-9585-ba07e461e477",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.353Z",
+    "updated_at": "2026-05-13T15:05:33.353Z",
+    "is_deleted": false,
+    "name": "10VA-00105",
+    "description": null
+  }
+},
+{
+  "model": "references.transmissionmodel",
+  "pk": "fa7952fe-40f4-4adc-a389-3bd6d5f5b395",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.353Z",
+    "updated_at": "2026-05-13T15:05:33.353Z",
+    "is_deleted": false,
+    "name": "HF50-VP020",
+    "description": null
+  }
+},
+{
+  "model": "references.drivingaxlemodel",
+  "pk": "2162db62-0df5-4aff-90aa-a21d337bfa14",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.354Z",
+    "updated_at": "2026-05-13T15:05:33.354Z",
+    "is_deleted": false,
+    "name": "HA50-VP010",
+    "description": null
+  }
+},
+{
+  "model": "references.drivingaxlemodel",
+  "pk": "2c2b585f-518a-486f-a9ab-1f4c729fd0d3",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.354Z",
+    "updated_at": "2026-05-13T15:05:33.354Z",
+    "is_deleted": false,
+    "name": "20VB-00102",
+    "description": null
+  }
+},
+{
+  "model": "references.drivingaxlemodel",
+  "pk": "334bfef7-1414-4d2d-ace9-641cf13dbaec",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.354Z",
+    "updated_at": "2026-05-13T15:05:33.354Z",
+    "is_deleted": false,
+    "name": "20VA-00101",
+    "description": null
+  }
+},
+{
+  "model": "references.drivingaxlemodel",
+  "pk": "8d1af918-a5ac-406c-86a4-0c76612cddcc",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.354Z",
+    "updated_at": "2026-05-13T15:05:33.354Z",
+    "is_deleted": false,
+    "name": "HA30-02020",
+    "description": null
+  }
+},
+{
+  "model": "references.steerableaxlemodel",
+  "pk": "84847a61-4bf5-4e99-ac75-356a836c2d44",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "VS30-00001",
+    "description": null
+  }
+},
+{
+  "model": "references.steerableaxlemodel",
+  "pk": "a3a23260-8b38-4d83-862b-4157784b9a27",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "VS20-00001",
+    "description": null
+  }
+},
+{
+  "model": "references.steerableaxlemodel",
+  "pk": "d8b38c4c-052d-4b94-b018-0d395ad0a267",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "B350655A",
+    "description": null
+  }
+},
+{
+  "model": "references.maintenancetype",
+  "pk": "3fdd4edd-e958-4899-a8bb-334345501ea7",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "ТО-0 (50 м/час)",
+    "description": null
+  }
+},
+{
+  "model": "references.maintenancetype",
+  "pk": "69eb35a7-2375-401a-b978-8f4d9ed62474",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "ТО-1 (200 м/час)",
+    "description": null
+  }
+},
+{
+  "model": "references.maintenancetype",
+  "pk": "7e0a5b37-bf1e-415f-b116-62419cd4a10a",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "ТО-5 (2000м/час)",
+    "description": null
+  }
+},
+{
+  "model": "references.maintenancetype",
+  "pk": "7e39a9e8-a3d9-4971-a1c9-e58e64f3d70a",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "ТО-4 (1000м/час)",
+    "description": null
+  }
+},
+{
+  "model": "references.maintenancetype",
+  "pk": "9670d7da-598b-4216-b543-985624c817dc",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.355Z",
+    "updated_at": "2026-05-13T15:05:33.355Z",
+    "is_deleted": false,
+    "name": "ТО-2 (400 м/час)",
+    "description": null
+  }
+},
+{
+  "model": "references.failurenode",
+  "pk": "1a2fcec6-8d05-4fa2-a385-82242d9dc54f",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.350Z",
+    "updated_at": "2026-05-13T15:05:33.350Z",
+    "is_deleted": false,
+    "name": "Двигатель",
+    "description": null
+  }
+},
+{
+  "model": "references.failurenode",
+  "pk": "530c7532-104c-4b62-a88b-8bb7f78935d7",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.350Z",
+    "updated_at": "2026-05-13T15:05:33.350Z",
+    "is_deleted": false,
+    "name": "Ведущий мост",
+    "description": null
+  }
+},
+{
+  "model": "references.failurenode",
+  "pk": "7708beec-d62c-41ad-b195-d19f42226a80",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.350Z",
+    "updated_at": "2026-05-13T15:05:33.350Z",
+    "is_deleted": false,
+    "name": "Подъёмное устройство",
+    "description": null
+  }
+},
+{
+  "model": "references.failurenode",
+  "pk": "c68b7fce-ebf9-4308-b46a-2ca166ee9a60",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.350Z",
+    "updated_at": "2026-05-13T15:05:33.350Z",
+    "is_deleted": false,
+    "name": "Трансмиссия",
+    "description": null
+  }
+},
+{
+  "model": "references.failurenode",
+  "pk": "d9b961bc-579b-4a6f-993d-839f9cd5ee34",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.350Z",
+    "updated_at": "2026-05-13T15:05:33.350Z",
+    "is_deleted": false,
+    "name": "Гидросистема",
+    "description": null
+  }
+},
+{
+  "model": "references.failurenode",
+  "pk": "ff0932f3-a6a7-4804-90aa-1abf903fec68",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.350Z",
+    "updated_at": "2026-05-13T15:05:33.350Z",
+    "is_deleted": false,
+    "name": "Управляемый мост",
+    "description": null
+  }
+},
+{
+  "model": "references.restorationmethod",
+  "pk": "9cc69914-248c-4426-ae50-a7f2f742af4b",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.351Z",
+    "updated_at": "2026-05-13T15:05:33.351Z",
+    "is_deleted": false,
+    "name": "Замена узла",
+    "description": null
+  }
+},
+{
+  "model": "references.restorationmethod",
+  "pk": "b72ef593-574a-41ec-9016-9563471505c3",
+  "fields": {
+    "created_at": "2026-05-13T15:05:33.351Z",
+    "updated_at": "2026-05-13T15:05:33.351Z",
+    "is_deleted": false,
+    "name": "Ремонт узла",
+    "description": null
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "client_1"
+    ],
+    "role": "client",
+    "organization": "a6f884e4-efe8-4d93-8d6c-72da18951a23"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "client_2"
+    ],
+    "role": "client",
+    "organization": "b8fb6caf-0cc2-4109-aede-6d0ba4f089f9"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "client_3"
+    ],
+    "role": "client",
+    "organization": "538bb65e-80ee-4ef6-9519-f47f53376825"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "client_4"
+    ],
+    "role": "client",
+    "organization": "9b60b6fe-bc0e-4118-8491-d758f3ee4026"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "client_5"
+    ],
+    "role": "client",
+    "organization": "d4fff832-d020-446d-acf3-78a40b1935ab"
+  }
+}
+]

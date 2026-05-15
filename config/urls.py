@@ -45,4 +45,5 @@ urlpatterns = [
         name="swagger-ui",
     ),
     path("", redirect_to_machines),
+    path("references/", include("references.urls")),
 ]

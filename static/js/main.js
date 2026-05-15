@@ -1,92 +1,102 @@
 // static/js/main.js
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("✅ main.js loaded");
+  console.log("🚀 main.js loaded");
 
-  // === Утилиты модалок ===
-  const ModalUtils = {
-    open(modalId) {
-      const modal = document.getElementById(modalId);
-      if (!modal) return console.error(`❌ Modal #${modalId} not found`);
-      modal.classList.add("is-open");
-      document.body.style.overflow = "hidden";
-      setTimeout(
-        () => modal.querySelector('input:not([type="hidden"])')?.focus(),
-        100,
-      );
-    },
-    close(modalId) {
-      const modal = document.getElementById(modalId);
-      if (!modal) return;
+  // === Простые функции открытия/закрытия ===
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) {
+      console.error(`❌ Модалка #${modalId} НЕ найдена в DOM!`);
+      return false;
+    }
+    console.log(`✅ Открываю #${modalId}`);
+    modal.style.display = "flex";
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    return true;
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      console.log(`✅ Закрываю #${modalId}`);
+      modal.style.display = "none";
       modal.classList.remove("is-open");
       document.body.style.overflow = "";
-    },
-  };
-
-  // === Единый делегатор для всех кликов в модалках ===
-  document.addEventListener("click", function (e) {
-    // 1. Закрытие по крестику
-    const closeBtn = e.target.closest(".modal-close");
-    if (closeBtn) {
-      e.preventDefault();
-      e.stopPropagation();
-      const modal = closeBtn.closest(".modal");
-      if (modal) ModalUtils.close(modal.id);
-      return;
     }
+  }
 
-    // 2. Закрытие по клику на оверлей (фон)
-    if (e.target.classList.contains("modal")) {
-      e.preventDefault();
-      ModalUtils.close(e.target.id);
-      return;
-    }
-
-    // 3. Открытие по кнопке с data-modal-open
-    const openBtn = e.target.closest("[data-modal-open]");
-    if (openBtn) {
-      e.preventDefault();
-      e.stopPropagation();
-      ModalUtils.open(openBtn.dataset.modalOpen);
-      return;
-    }
-  });
-
-  // 4. Закрытие по Escape
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      document
-        .querySelectorAll(".modal.is-open")
-        .forEach((m) => ModalUtils.close(m.id));
-    }
-  });
-
-  // 5. HTMX + Табы (оставляем как было)
-  document.body.addEventListener("htmx:afterSwap", (evt) => {
-    if (evt.detail.target.id === "modal-body")
-      ModalUtils.open("reference-modal");
-  });
-
-  document.body.addEventListener("click", function (e) {
-    const tabBtn = e.target.closest(".tab-btn[data-tab]");
-    if (!tabBtn) return;
-    e.preventDefault();
-    const tabId = tabBtn.dataset.tab;
-    const container =
-      tabBtn.closest(".modal") || tabBtn.closest("main") || document;
-    container.querySelectorAll(".tab-btn").forEach((b) => {
-      b.classList.remove("active");
-      b.setAttribute("aria-selected", "false");
+  // === Крестики закрытия ===
+  document.querySelectorAll(".modal-close").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const modal = this.closest(".modal");
+      if (modal) closeModal(modal.id);
     });
+  });
+
+  // === Клик по фону закрывает модалку ===
+  document.querySelectorAll(".modal").forEach((modal) => {
+    modal.addEventListener("click", function (e) {
+      if (e.target === this) closeModal(this.id);
+    });
+  });
+
+  // === Escape ===
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".modal").forEach((m) => {
+        if (m.style.display !== "none") closeModal(m.id);
+      });
+    }
+  });
+
+  // === HTMX: после загрузки контента — открываем модалку ===
+  document.body.addEventListener("htmx:afterSwap", function (evt) {
+    console.log("📦 HTMX loaded into:", evt.detail.target.id);
+
+    if (evt.detail.target.id === "modal-body") {
+      openModal("reference-modal");
+    }
+    if (evt.detail.target.id === "machine-modal-body") {
+      if (openModal("machine-modal")) {
+        // Сброс табов
+        setTimeout(() => {
+          const modal = document.getElementById("machine-modal");
+          if (modal) {
+            modal.querySelectorAll(".tab-btn").forEach((b, i) => {
+              b.classList.toggle("active", i === 0);
+              b.setAttribute("aria-selected", i === 0);
+            });
+            modal.querySelectorAll(".tab-content").forEach((c, i) => {
+              c.classList.toggle("active", i === 0);
+            });
+          }
+        }, 100);
+      }
+    }
+  });
+
+  // === Табы ===
+  document.body.addEventListener("click", function (e) {
+    const btn = e.target.closest(".tab-btn[data-tab]");
+    if (!btn) return;
+    e.preventDefault();
+    const tabId = btn.dataset.tab;
+    const container = btn.closest(".modal") || document;
+
+    container
+      .querySelectorAll(".tab-btn")
+      .forEach((b) => b.classList.remove("active"));
     container
       .querySelectorAll(".tab-content")
       .forEach((c) => c.classList.remove("active"));
-    tabBtn.classList.add("active");
-    tabBtn.setAttribute("aria-selected", "true");
+
+    btn.classList.add("active");
     const target = container.querySelector(`#${tabId}`);
     if (target) target.classList.add("active");
   });
 
-  // 🔹 Логика бургер-меню
+  // === Бургер ===
   const burger = document.querySelector(".header__burger");
   const mobileMenu = document.getElementById("mobile-menu");
   if (burger && mobileMenu) {
@@ -95,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
       burger.classList.toggle("is-active");
       burger.setAttribute("aria-expanded", isOpen);
     });
-    // Закрывать меню при клике на ссылку/кнопку внутри
     mobileMenu.addEventListener("click", (e) => {
       if (e.target.matches("a, button")) {
         mobileMenu.classList.remove("is-open");
@@ -105,5 +114,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  window.SilantModal = ModalUtils;
+  // === Тест клика по ячейкам (отладка) ===
+  document.querySelectorAll(".interactive-cell").forEach((cell) => {
+    cell.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("🖱 Click on:", this.textContent.trim());
+      console.log("🔗 hx-get:", this.getAttribute("hx-get"));
+      console.log("🎯 hx-target:", this.getAttribute("hx-target"));
+
+      if (window.htmx) {
+        console.log("✅ HTMX is ready");
+      } else {
+        console.error("❌ HTMX NOT loaded! Check script order in base.html");
+      }
+    });
+  });
 });
